@@ -1,13 +1,23 @@
+# -*- coding: utf-8 -*-
+
 import numpy as np
 import cv2
 import matplotlib.pyplot as plt
 import os
 from xml.dom import minidom
 
+__author__ = 'socurites@gmail.com'
+
+"""
+이미지 Crop
+"""
+
 root_dir = '/home/itrocks/Backup/Data/StandfordDogs'
+target_image_dir = '/home/itrocks/Git/Tensorflow/dog-breed-classification.tf/raw_data/dog/images'
+
 root_image_dir = os.path.join(root_dir, 'Images')
 root_annotation_dir = os.path.join(root_dir, 'Annotation')
-target_image_dir = '/home/itrocks/Git/Tensorflow/dog-breed-classification.tf/raw_data/dog/images'
+
 
 
 def parse_annotation(image_dir, image):
